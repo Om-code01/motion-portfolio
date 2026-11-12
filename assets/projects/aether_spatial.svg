@@ -1,0 +1,25 @@
+<svg width='1400' height='600' viewBox='0 0 1400 600' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <rect width='1400' height='600' fill='#060608'/>
+  <defs>
+    <radialGradient id='g5' cx='50%' cy='50%' r='50%'>
+      <stop offset='0%' stop-color='#27272a' stop-opacity='0.6'/>
+      <stop offset='100%' stop-color='#060608' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='whiteGrad' x1='0%' y1='0%' x2='100%' y2='0%'>
+      <stop offset='0%' stop-color='rgba(255,255,255,0.05)'/>
+      <stop offset='50%' stop-color='rgba(255,255,255,0.85)'/>
+      <stop offset='100%' stop-color='rgba(255,255,255,0.05)'/>
+    </linearGradient>
+  </defs>
+  <rect width='1400' height='600' fill='url(#g5)'/>
+  <g opacity='0.85'>
+    <path d='M0 300 Q175 160 350 300 T700 300 T1050 300 T1400 300' stroke='url(#whiteGrad)' stroke-width='2' fill='none'/>
+    <path d='M0 300 Q175 220 350 300 T700 300 T1050 300 T1400 300' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' fill='none'/>
+    <path d='M0 300 Q175 100 350 300 T700 300 T1050 300 T1400 300' stroke='rgba(255,255,255,0.18)' stroke-width='1' fill='none'/>
+    <circle cx='700' cy='300' r='140' stroke='rgba(255,255,255,0.15)' stroke-width='1'/>
+    <circle cx='700' cy='300' r='80' stroke='rgba(255,255,255,0.25)' stroke-width='1.5' stroke-dasharray='6 6'/>
+    <circle cx='700' cy='300' r='6' fill='#ffffff'/>
+  </g>
+  <text x='80' y='90' font-family='monospace' font-size='14' fill='#ffffff' letter-spacing='4'>AETHER // ALGORITHMIC AUDIO &amp; GENERATIVE SHADERS</text>
+  <text x='80' y='540' font-family='monospace' font-size='12' fill='#71717a' letter-spacing='2'>WEB AUDIO API • WEB WORKERS • KINETIC PARTICLES</text>
+</svg>

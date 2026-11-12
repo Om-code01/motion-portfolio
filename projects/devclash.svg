@@ -1,0 +1,36 @@
+<svg width='1000' height='1000' viewBox='0 0 1000 1000' fill='none' xmlns='http://www.w3.org/2000/svg'>
+  <rect width='1000' height='1000' fill='#08080a'/>
+  <defs>
+    <radialGradient id='g2' cx='50%' cy='45%' r='55%'>
+      <stop offset='0%' stop-color='#1e293b' stop-opacity='0.7'/>
+      <stop offset='100%' stop-color='#08080a' stop-opacity='0'/>
+    </radialGradient>
+    <linearGradient id='orange' x1='0%' y1='0%' x2='100%' y2='0%'>
+      <stop offset='0%' stop-color='#f97316'/>
+      <stop offset='100%' stop-color='#fbbf24'/>
+    </linearGradient>
+  </defs>
+  <rect width='1000' height='1000' fill='url(#g2)'/>
+  <g opacity='0.9' transform='translate(100, 160)'>
+    <rect x='0' y='0' width='800' height='580' rx='8' fill='#0f172a' stroke='rgba(255,255,255,0.1)' stroke-width='1.5'/>
+    <rect x='0' y='0' width='800' height='40' rx='8' fill='#1e293b'/>
+    <circle cx='25' cy='20' r='6' fill='#ef4444'/>
+    <circle cx='45' cy='20' r='6' fill='#eab308'/>
+    <circle cx='65' cy='20' r='6' fill='#22c55e'/>
+    <text x='100' y='25' font-family='monospace' font-size='12' fill='#94a3b8'>devclash-arena // match_id: 884-alpha</text>
+    <line x1='400' y1='40' x2='400' y2='580' stroke='rgba(255,255,255,0.06)' stroke-width='1.5'/>
+    <text x='30' y='80' font-family='monospace' font-size='14' fill='#38bdf8'>PLAYER 1: Om_Prakash [Rank #14]</text>
+    <text x='30' y='120' font-family='monospace' font-size='13' fill='#e2e8f0'>function solveKnapsack(weights, values) {</text>
+    <text x='50' y='150' font-family='monospace' font-size='13' fill='#94a3b8'>  const n = weights.length;</text>
+    <text x='50' y='180' font-family='monospace' font-size='13' fill='#94a3b8'>  const dp = Array(n + 1).fill(0);</text>
+    <text x='50' y='210' font-family='monospace' font-size='13' fill='#f97316'>  // Real-time AST verification</text>
+    <text x='30' y='240' font-family='monospace' font-size='13' fill='#e2e8f0'>}</text>
+    <text x='430' y='80' font-family='monospace' font-size='14' fill='#f43f5e'>PLAYER 2: Neural_Challenger</text>
+    <rect x='430' y='110' width='340' height='12' rx='3' fill='rgba(255,255,255,0.08)'/>
+    <rect x='430' y='135' width='280' height='12' rx='3' fill='rgba(255,255,255,0.08)'/>
+    <rect x='430' y='160' width='310' height='12' rx='3' fill='rgba(255,255,255,0.08)'/>
+    <rect x='280' y='480' width='240' height='45' rx='6' fill='url(#orange)'/>
+    <text x='400' y='508' font-family='sans-serif' font-weight='bold' font-size='14' fill='#000' text-anchor='middle'>LIVE SYNC: 144 FPS</text>
+  </g>
+  <text x='80' y='880' font-family='monospace' font-size='13' fill='#f97316' letter-spacing='3'>COMPETITIVE ESPORTS // WEBRTC STREAMING</text>
+</svg>

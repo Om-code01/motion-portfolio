@@ -1,0 +1,22 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & workspace files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Node / package manager
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary logs
+*.log

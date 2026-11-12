@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OM — Creative Web Developer</title>
+  <meta name="description" content="Creative Web Developer building modern websites, interactive experiences, and intelligent applications.">
+
+  <!-- Google Fonts: Syne (Architectural Grotesque) & Inter (Precision Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Spotlight & Subtle Film Grain -->
+  <div class="ambient-spotlight" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Full-Bleed Hero Viewport (Expanded Edge-to-Edge) -->
+  <main class="hero-stage" id="heroStage">
+    <div id="home" class="section-anchor" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;" aria-hidden="true"></div>
+    
+    <!-- BG_IMAGE_1: Base Hero Background (Night Scene) -->
+    <div class="hero-bg-layer hero-bg-base" aria-hidden="true"></div>
+
+    <!-- BG_IMAGE_2: Hidden Reveal Image (Day Scene via Cursor Spotlight) -->
+    <div class="hero-bg-layer hero-bg-reveal" id="heroBgReveal" aria-hidden="true"></div>
+
+    <!-- Soft feathered edge glow for the circular spotlight -->
+    <div class="reveal-spotlight-glow" id="revealGlow" aria-hidden="true"></div>
+
+    <!-- Subtle atmospheric stage vignette -->
+    <div class="frame-inner-glow" aria-hidden="true"></div>
+
+    <!-- Top Navigation Bar -->
+    <nav class="hero-nav" aria-label="Main Portfolio Navigation">
+      <!-- Brand wordmark -->
+      <div class="nav-brand">
+        <a href="#home" class="brand-link">OM</a>
+      </div>
+
+      <!-- Navigation Links: "ABOUT / PROJECTS / RESUME / GITHUB / CONTACT" -->
+      <div class="nav-links">
+        <a href="#about" class="nav-link"><span class="slash-prefix">/</span>ABOUT</a>
+        <a href="#projects" class="nav-link"><span class="slash-prefix">/</span>PROJECTS</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" title="View / Download Resume (PDF)"><span class="slash-prefix">/</span>RESUME ↗</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link"><span class="slash-prefix">/</span>GITHUB</a>
+        <a href="#contact" class="nav-link"><span class="slash-prefix">/</span>CONTACT</a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobileDrawer">
+      <a href="#about" class="mobile-item"><span class="slash-prefix">/</span>ABOUT</a>
+      <a href="#projects" class="mobile-item"><span class="slash-prefix">/</span>PROJECTS</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-item"><span class="slash-prefix">/</span>RESUME ↗</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="mobile-item"><span class="slash-prefix">/</span>GITHUB</a>
+      <a href="#contact" class="mobile-item"><span class="slash-prefix">/</span>CONTACT</a>
+    </div>
+
+    <!-- Central Typographic Focus Area -->
+    <section class="hero-center-content">
+      <div class="headline-block">
+        
+        <!-- Supporting Kicker -->
+        <div class="hero-kicker">
+          <span>OM PRAKASH MUDULI // CREATIVE WEB DEVELOPER</span>
+        </div>
+
+        <!-- Dominant Headline: "OM" -->
+        <h1 class="dominant-title" id="dominantTitle">OM</h1>
+
+      </div>
+    </section>
+
+    <!-- Bottom Stage Information & Actions -->
+    <div class="hero-bottom-area">
+      
+      <!-- Bottom Left: Editorial Description -->
+      <div class="bottom-left-desc">
+        <p class="description-text">
+          Turning ideas into functional and engaging digital experiences.<br class="desc-break">
+          Building responsive websites, interactive interfaces, and modern applications.
+        </p>
+      </div>
+
+      <!-- Bottom Right: CTA Action Buttons -->
+      <div class="bottom-right-ctas">
+        <a href="#projects" class="cta-btn primary-cta">
+          <span class="cta-label">Explore Projects</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="cta-btn secondary-cta" title="Open / Download Om Prakash Muduli Resume (PDF)">
+          <span class="cta-label">Resume / CV</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a href="#contact" class="cta-btn secondary-cta">
+          <span class="cta-label">Let's Connect</span>
+          <span class="cta-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Cinematic Scroll-Driven Storytelling Section -->
+  <section class="story-scroll-section" id="storytelling" aria-label="Creative Craft Story">
+    <div class="story-sticky-track" id="storyStickyTrack">
+      
+      <!-- Ambient depth vignette -->
+      <div class="story-backdrop-glow" aria-hidden="true"></div>
+
+      <!-- Central Expanding Media Card (Starts at Vertical 9:16 Portrait Ratio, Expands to Full-Screen) -->
+      <div class="story-media-card" id="storyMediaCard">
+        <div class="media-aspect-wrapper">
+          <img 
+            src="assets/crocheted_retro_tv.jpg" 
+            alt="Crocheted Retro TV Craft Room - Creative Engineering" 
+            class="story-media-img"
+            id="storyMediaImg"
+          />
+          <div class="media-lens-sheen" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Asymmetric Editorial Text Elements -->
+      <div class="story-editorial-grid" id="storyEditorialGrid" aria-hidden="true">
+        
+        <!-- Top Left: CREATIVE DEVELOPER -->
+        <div class="editorial-piece piece-top-left" id="pieceTopLeft">
+          <span class="piece-label">01 // DISCIPLINE</span>
+          <div class="piece-title">CREATIVE DEVELOPER</div>
+        </div>
+
+        <!-- Top Right: Turning Ideas Into Experiences -->
+        <div class="editorial-piece piece-top-right" id="pieceTopRight">
+          <span class="piece-label">02 // PHILOSOPHY</span>
+          <div class="piece-title piece-serif">Turning Ideas Into Experiences</div>
+        </div>
+
+        <!-- Bottom Left: React / Next.js / TypeScript -->
+        <div class="editorial-piece piece-bottom-left" id="pieceBottomLeft">
+          <span class="piece-label">03 // CORE STACK</span>
+          <div class="piece-title piece-mono">React / Next.js / TypeScript</div>
+        </div>
+
+        <!-- Bottom Right: Experimenting with AI & 3D -->
+        <div class="editorial-piece piece-bottom-right" id="pieceBottomRight">
+          <span class="piece-label">04 // FRONTIER LABS</span>
+          <div class="piece-title">Experimenting with AI & 3D</div>
+        </div>
+
+        <!-- Center Bottom: DESIGN × DEVELOPMENT -->
+        <div class="editorial-piece piece-center-bottom" id="pieceCenterBottom">
+          <div class="editorial-capsule">
+            <span class="capsule-dot"></span>
+            <span class="capsule-text">DESIGN × DEVELOPMENT</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Subtle Scroll Indicator in the sticky frame -->
+      <div class="story-scroll-indicator" id="storyScrollIndicator">
+        <span class="scroll-label">SCROLL TO EXPAND</span>
+        <div class="scroll-bar-track">
+          <div class="scroll-bar-fill" id="scrollBarFill"></div>
+        </div>
+      </div>
+
+      <!-- Immersive Full-Screen Reveal Overlay (Fades in at full expansion) -->
+      <div class="story-immersive-overlay" id="storyImmersiveOverlay">
+        <div class="immersive-content">
+          <span class="immersive-tag">DIGITAL CRAFTSMANSHIP</span>
+          <h2 class="immersive-heading">Handcrafted code meets kinetic interactive art.</h2>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SCROLL-DRIVEN STORYTELLING SECTION (Canvas Frame Engine)
+       Sequence: ABOUT ME (150 frames) → SKILLS (100 frames) → WORK EXPERIENCE (299 frames)
+       ========================================================================= -->
+  <section class="frame-story-section" id="storytellingSection" aria-label="Visual Storytelling: About Me, Skills, and Work Experience">
+    <div id="about" class="section-anchor" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;" aria-hidden="true"></div>
+    
+    <!-- Sticky Full-Bleed Viewport Canvas Stage -->
+    <div class="frame-story-sticky" id="frameStorySticky">
+      
+      <!-- Ambient Lighting Halos & Floating Watermarks -->
+      <div class="story-ambient-glow" aria-hidden="true"></div>
+      <div class="story-watermark-wrap" aria-hidden="true">
+        <span class="story-watermark" id="storyWatermark">ABOUT ME</span>
+      </div>
+
+      <!-- Top Editorial HUD & Sequence Chapter Bar -->
+      <header class="story-top-hud">
+        <div class="hud-left-meta">
+          <div class="hud-capsule">
+            <span class="hud-pulse-dot"></span>
+            <span class="hud-kicker">STORY ENGINE // <span id="hudSeqKicker">01 ABOUT ME</span></span>
+          </div>
+          <span class="hud-coords">ARCHIVE TIMELINE // 2022—2026</span>
+        </div>
+
+        <!-- Sequence Selector Tabs -->
+        <nav class="hud-sequence-tabs" aria-label="Story sequence chapters">
+          <button class="seq-tab active" data-target-seq="0" id="tabSeq0">
+            <span class="seq-tab-num">01</span>
+            <span class="seq-tab-title">ABOUT ME</span>
+          </button>
+          <button class="seq-tab" data-target-seq="1" id="tabSeq1">
+            <span class="seq-tab-num">02</span>
+            <span class="seq-tab-title">SKILLS</span>
+          </button>
+          <button class="seq-tab" data-target-seq="2" id="tabSeq2">
+            <span class="seq-tab-num">03</span>
+            <span class="seq-tab-title">WORK EXPERIENCE</span>
+          </button>
+        </nav>
+
+        <!-- Right Live Frame Counter HUD -->
+        <div class="hud-right-counter">
+          <div class="frame-counter-pill">
+            <span class="counter-label">PLAYBACK:</span>
+            <span class="counter-value" id="hudFrameCounter">FRAME 001 / 150</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Interactive Stage Viewport -->
+      <div class="story-stage-viewport" id="storyStageViewport">
+
+        <!-- ================= SEQUENCE 01: ABOUT ME ================= -->
+        <article class="story-sequence-stage active" id="stageAboutMe" data-seq-index="0">
+          <div class="stage-inner-grid">
+            
+            <!-- Canvas Visual Card -->
+            <div class="sequence-visual-card" id="visualCardAboutMe">
+              <div class="visual-aspect-wrapper" id="aspectWrapAboutMe">
+                <canvas class="sequence-canvas" id="canvasAboutMe" width="1920" height="1080"></canvas>
+                <div class="visual-lens-sheen" aria-hidden="true"></div>
+                <div class="visual-floating-badge">
+                  <span class="badge-dot"></span>
+                  <span>01 // GENESIS & PHILOSOPHY</span>
+                </div>
+                <div class="visual-aspect-tag" id="aspectTagAboutMe">16:9 CINEMATIC</div>
+              </div>
+            </div>
+
+            <!-- Accompanying Editorial Info Block -->
+            <div class="sequence-info-panel" id="infoPanelAboutMe">
+              <div class="info-meta-line">
+                <span class="info-sequence-num">01 / ABOUT ME</span>
+                <span class="info-sequence-tag">CREATIVE WEB DEVELOPER</span>
+              </div>
+              <h2 class="info-headline">OM PRAKASH MUDULI</h2>
+              <p class="info-summary">
+                I'm Om Prakash Muduli, a creative web developer who enjoys turning ideas into functional and engaging digital experiences. I build responsive websites, interactive interfaces, and practical applications using modern technologies.
+              </p>
+              
+              <!-- Editorial Highlights -->
+              <div class="info-pillars-grid">
+                <div class="info-pillar-item">
+                  <span class="pillar-bullet">01</span>
+                  <div class="pillar-body">
+                    <h3 class="pillar-title">Modern Web Development</h3>
+                    <p class="pillar-desc">Building responsive, accessible, and high-performance websites and interactive interfaces with React.js, Next.js, TypeScript, and modern CSS.</p>
+                  </div>
+                </div>
+                <div class="info-pillar-item">
+                  <span class="pillar-bullet">02</span>
+                  <div class="pillar-body">
+                    <h3 class="pillar-title">AI & Computer Vision</h3>
+                    <p class="pillar-desc">Developing practical AI applications—including Evelyn, a Windows-based personal AI assistant, and webcam-powered 3D hand tracking with GestureCraft 3D.</p>
+                  </div>
+                </div>
+                <div class="info-pillar-item">
+                  <span class="pillar-bullet">03</span>
+                  <div class="pillar-body">
+                    <h3 class="pillar-title">Frontend Internship & Growth</h3>
+                    <p class="pillar-desc">Frontend development internship experience at InLighnX Global Pvt. Ltd., collaborating on real-world projects, UI/UX polish, and reusable component architectures.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Tags & Status -->
+              <div class="info-footer-bar">
+                <span class="info-tag-pill">Frontend Intern @ InLighnX</span>
+                <span class="info-tag-pill">1st Place // IDEAS 2K25</span>
+                <span class="info-tag-pill">Web, AI & 3D Interaction</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ================= SEQUENCE 02: SKILLS ================= -->
+        <article class="story-sequence-stage" id="stageSkills" data-seq-index="1">
+          <div class="stage-inner-grid">
+            
+            <!-- Canvas Visual Card -->
+            <div class="sequence-visual-card" id="visualCardSkills">
+              <div class="visual-aspect-wrapper" id="aspectWrapSkills">
+                <canvas class="sequence-canvas" id="canvasSkills" width="1920" height="1080"></canvas>
+                <div class="visual-lens-sheen" aria-hidden="true"></div>
+                <div class="visual-floating-badge">
+                  <span class="badge-dot badge-dot-purple"></span>
+                  <span>02 // DISCIPLINARY ARSENAL</span>
+                </div>
+                <div class="visual-aspect-tag" id="aspectTagSkills">16:9 CINEMATIC</div>
+              </div>
+            </div>
+
+            <!-- Accompanying Editorial Info Block -->
+            <div class="sequence-info-panel" id="infoPanelSkills">
+              <div class="info-meta-line">
+                <span class="info-sequence-num">02 / SKILLS</span>
+                <span class="info-sequence-tag">TECHNICAL ARSENAL</span>
+              </div>
+              <h2 class="info-headline">SKILLS & TECHNOLOGIES</h2>
+              <p class="info-summary">
+                A solid, versatile technical foundation covering frontend engineering, backend development, databases, creative 3D web experiences, and AI integration.
+              </p>
+
+              <!-- Categorized Skills Grid -->
+              <div class="skills-editorial-grid">
+                <div class="skill-group-col">
+                  <div class="skill-group-header">
+                    <span class="group-prefix">// 01</span>
+                    <h3 class="group-name">Frontend & Creative Development</h3>
+                  </div>
+                  <div class="skill-pills-wrap">
+                    <span class="tech-pill">React.js</span>
+                    <span class="tech-pill">Next.js</span>
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                    <span class="tech-pill">HTML5</span>
+                    <span class="tech-pill">CSS3</span>
+                    <span class="tech-pill">Framer Motion</span>
+                    <span class="tech-pill">Three.js</span>
+                    <span class="tech-pill">Spline</span>
+                    <span class="tech-pill">Interactive UI & 3D Web</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-col">
+                  <div class="skill-group-header">
+                    <span class="group-prefix">// 02</span>
+                    <h3 class="group-name">Backend & Databases</h3>
+                  </div>
+                  <div class="skill-pills-wrap">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">Django</span>
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">Express.js</span>
+                    <span class="tech-pill">MongoDB</span>
+                    <span class="tech-pill">Firebase</span>
+                    <span class="tech-pill">Firestore</span>
+                    <span class="tech-pill">Supabase</span>
+                    <span class="tech-pill">SQLite</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-col">
+                  <div class="skill-group-header">
+                    <span class="group-prefix">// 03</span>
+                    <h3 class="group-name">Tools, Platforms & AI Knowledge</h3>
+                  </div>
+                  <div class="skill-pills-wrap">
+                    <span class="tech-pill">Git</span>
+                    <span class="tech-pill">GitHub</span>
+                    <span class="tech-pill">Vite</span>
+                    <span class="tech-pill">Postman</span>
+                    <span class="tech-pill">Vercel</span>
+                    <span class="tech-pill">Netlify</span>
+                    <span class="tech-pill">Google Cloud Run</span>
+                    <span class="tech-pill">AI App Development</span>
+                    <span class="tech-pill">Computer Vision</span>
+                    <span class="tech-pill">Machine Learning Basics</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Metric Line -->
+              <div class="info-footer-bar">
+                <span class="info-tag-pill">Modern Full-Stack</span>
+                <span class="info-tag-pill">3D Web & Interactive UI</span>
+                <span class="info-tag-pill">Responsive & Cloud-Ready</span>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ================= SEQUENCE 03: WORK EXPERIENCE ================= -->
+        <article class="story-sequence-stage" id="stageWork" data-seq-index="2">
+          <div class="stage-inner-grid">
+            
+            <!-- Canvas Visual Card -->
+            <div class="sequence-visual-card" id="visualCardWork">
+              <div class="visual-aspect-wrapper" id="aspectWrapWork">
+                <canvas class="sequence-canvas" id="canvasWork" width="1920" height="1080"></canvas>
+                <div class="visual-lens-sheen" aria-hidden="true"></div>
+                <div class="visual-floating-badge">
+                  <span class="badge-dot badge-dot-green"></span>
+                  <span>03 // TRACK RECORD</span>
+                </div>
+                <div class="visual-aspect-tag" id="aspectTagWork">16:9 CINEMATIC</div>
+              </div>
+            </div>
+
+            <!-- Accompanying Editorial Info Block -->
+            <div class="sequence-info-panel" id="infoPanelWork">
+              <div class="info-meta-line">
+                <span class="info-sequence-num">03 / EXPERIENCE & AWARDS</span>
+                <span class="info-sequence-tag">INDUSTRY & RECOGNITION</span>
+              </div>
+              <h2 class="info-headline">WORK EXPERIENCE & AWARDS</h2>
+              <p class="info-summary">
+                Hands-on frontend development internship experience paired with first-place recognition at the annual college tech fest for developing an innovative desktop AI assistant.
+              </p>
+
+              <!-- Chronology Timeline Entries -->
+              <div class="experience-timeline-list">
+                
+                <!-- Achievement Highlight -->
+                <div class="exp-timeline-item" style="border-left: 3px solid var(--accent-pink);">
+                  <div class="exp-time-badge" style="color: var(--accent-pink); font-weight: 700;">★ 1ST POSITION WINNER // IDEAS 2K25</div>
+                  <div class="exp-content">
+                    <h3 class="exp-role-title">Annual Tech Fest IDEAS 2K25 — 1st Position</h3>
+                    <div class="exp-company-tag">Project Evelyn // Windows Personal AI Assistant</div>
+                    <p class="exp-summary-text">
+                      Won 1st Position at Annual Tech Fest IDEAS 2K25 for developing Evelyn, a Windows-based Personal AI Assistant designed to make everyday computer interactions smarter and more convenient through an AI-powered desktop experience.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Internship Experience -->
+                <div class="exp-timeline-item">
+                  <div class="exp-time-badge">NOVEMBER 2025 — FEBRUARY 2026</div>
+                  <div class="exp-content">
+                    <h3 class="exp-role-title">Frontend Developer Intern</h3>
+                    <div class="exp-company-tag">InLighnX Global Pvt. Ltd.</div>
+                    <p class="exp-summary-text">
+                      Developed responsive and user-friendly web interfaces. Improved UI/UX through layout and interaction enhancements, optimized performance to reduce page load time, and worked on real client projects in an agile team environment.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Education Entry from Resume -->
+                <div class="exp-timeline-item">
+                  <div class="exp-time-badge">EDUCATION // B.TECH COMPUTER SCIENCE</div>
+                  <div class="exp-content">
+                    <h3 class="exp-role-title">B.Tech in Computer Science</h3>
+                    <div class="exp-company-tag">World College of Technology and Management</div>
+                    <p class="exp-summary-text">
+                      Built a solid foundation in programming, databases, and software engineering. Worked on web and AI applications using Python, Django, JavaScript, and modern web frameworks.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Footer Metric Line & Resume Action -->
+              <div class="info-footer-bar">
+                <span class="info-tag-pill">InLighnX Global</span>
+                <span class="info-tag-pill">IDEAS 2K25 1st Position</span>
+                <span class="info-tag-pill">WCTM Gurugram</span>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="info-tag-pill info-resume-pill" title="Open Full Resume (PDF)">
+                  <span>📄 View Resume PDF ↗</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Bottom Cinematic Progress Track -->
+      <footer class="story-bottom-hud">
+        <div class="story-progress-container">
+          <div class="story-progress-track">
+            <div class="story-progress-bar" id="storyProgressBar"></div>
+          </div>
+          <div class="story-progress-milestones">
+            <span class="milestone-label" id="ms0">01 // ABOUT ME</span>
+            <span class="milestone-label" id="ms1">02 // SKILLS</span>
+            <span class="milestone-label" id="ms2">03 // WORK EXPERIENCE</span>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECT DISCOVERY SECTION (Interactive Digital Archive)
+       ========================================================================= -->
+  <section class="discovery-section" id="projects" aria-label="Project Discovery Archive">
+    <div id="archive" class="section-anchor" style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none;" aria-hidden="true"></div>
+    
+    <!-- Oversized Floating Editorial Watermarks -->
+    <div class="watermark-container" aria-hidden="true">
+      <span class="floating-watermark wm-1">DISCOVERY</span>
+      <span class="floating-watermark wm-2">ARCHIVE</span>
+      <span class="floating-watermark wm-3">SYSTEMS</span>
+    </div>
+
+    <div class="discovery-inner-container">
+      
+      <!-- Section Header -->
+      <header class="discovery-header">
+        <div class="discovery-meta-bar">
+          <div class="meta-tag-pill">
+            <span class="meta-dot"></span>
+            <span>CURATED INDEX // 2025—2026</span>
+          </div>
+          <div class="meta-coords">ARCHIVE // 04 FEATURED PROJECTS</div>
+        </div>
+
+        <div class="discovery-title-row">
+          <h2 class="discovery-title">EXPLORE MY WORK</h2>
+          <span class="discovery-count">[ 04 FEATURED PROJECTS ]</span>
+        </div>
+
+        <p class="discovery-lead">
+          A showcase of practical projects spanning web development, artificial intelligence, computer vision, and collaborative full-stack applications.
+        </p>
+      </header>
+
+      <!-- Asymmetric Editorial Grid -->
+      <div class="discovery-grid" id="discoveryGrid">
+        
+        <!-- Project 01: Evelyn AI Assistant (Span 7, Wide Editorial Showcase) -->
+        <article class="archive-card card-wide card-evelyn" data-index="01">
+          <div class="card-ambient-glow" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-visual-frame">
+              <img src="assets/projects/evelyn.jpg" alt="Evelyn Personal AI Assistant" class="card-img" onerror="this.onerror=null; this.src='projects/evelyn.jpg';">
+              <div class="card-visual-overlay"></div>
+              <div class="card-floating-badge">★ 1ST POSITION // IDEAS 2K25 WINNER</div>
+            </div>
+            
+            <div class="card-info-block">
+              <div class="card-header-line">
+                <span class="card-num">01 / FEATURED PROJECT</span>
+                <span class="card-type">WINDOWS PERSONAL AI ASSISTANT</span>
+              </div>
+              <h3 class="card-title">Evelyn AI Assistant</h3>
+              <div class="card-stack-tags">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">AI Application</span>
+                <span class="stack-tag">Machine Learning</span>
+                <span class="stack-tag">Computer Vision</span>
+                <span class="stack-tag">Desktop OS</span>
+              </div>
+              <p class="card-description">
+                Windows-based Personal AI Assistant and award-winning college tech fest project. Won 1st Position at Annual Tech Fest IDEAS 2K25. Evelyn was created to make everyday computer interactions smarter and more convenient through an AI-powered desktop experience.
+              </p>
+              <div class="card-footer-action">
+                <span class="action-text">Award-Winning Project // IDEAS 2K25</span>
+                <span class="action-arrow">★</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 02: DevClash / BuildClash (Span 5, Tall Portrait Card) -->
+        <article class="archive-card card-portrait card-devclash" data-index="02">
+          <div class="card-ambient-glow" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-visual-frame">
+              <img src="assets/projects/devclash.jpg" alt="BuildClash Coding Arena Platform" class="card-img" onerror="this.onerror=null; this.src='projects/buildclash.jpg';">
+              <div class="card-visual-overlay"></div>
+              <div class="card-floating-badge">FREELANCE &amp; CONTEST ARENA</div>
+            </div>
+            
+            <div class="card-info-block">
+              <div class="card-header-line">
+                <span class="card-num">02 / FEATURED PROJECT</span>
+                <span class="card-type">FULL-STACK WEB PLATFORM</span>
+              </div>
+              <h3 class="card-title">DevClash / BuildClash</h3>
+              <div class="card-stack-tags">
+                <span class="stack-tag">Next.js</span>
+                <span class="stack-tag">React.js</span>
+                <span class="stack-tag">TypeScript</span>
+                <span class="stack-tag">Tailwind CSS</span>
+                <span class="stack-tag">WebSockets</span>
+              </div>
+              <p class="card-description">
+                A freelance marketplace and developer contest platform where clients specify code challenges with funded escrows, and developers compete to craft the cleanest, most efficient solutions in secure sandbox environments.
+              </p>
+              <a href="https://buildclash.ai.studio" target="_blank" rel="noopener noreferrer" class="card-footer-action" title="Visit BuildClash live website">
+                <span class="action-text">Launch Live Arena</span>
+                <span class="action-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 03: GestureCraft 3D (Span 5, Shifted Card) -->
+        <article class="archive-card card-portrait card-gesturecraft" data-index="03">
+          <div class="card-ambient-glow" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-visual-frame">
+              <img src="assets/projects/gesturecraft.jpg" alt="GestureCraft 3D Real-time Spatial Hand Tracking Showcase" class="card-img" onerror="this.onerror=null; this.src='projects/gesturecraft.jpg';">
+              <div class="card-visual-overlay"></div>
+              <div class="card-floating-badge">COMPUTER VISION &amp; 3D WEB</div>
+            </div>
+            
+            <div class="card-info-block">
+              <div class="card-header-line">
+                <span class="card-num">03 / FEATURED PROJECT</span>
+                <span class="card-type">3D SPATIAL INTERACTION</span>
+              </div>
+              <h3 class="card-title">GestureCraft 3D</h3>
+              <div class="card-stack-tags">
+                <span class="stack-tag">Three.js</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Computer Vision</span>
+                <span class="stack-tag">MediaPipe</span>
+                <span class="stack-tag">WebGL</span>
+              </div>
+              <p class="card-description">
+                Webcam-based hand tracking system for interacting with and manipulating 3D objects in real time. Enables frictionless spatial navigation and manipulation directly in the browser without specialized hardware.
+              </p>
+              <div class="card-footer-action">
+                <span class="action-text">Launch Spatial 3D Sandbox</span>
+                <span class="action-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 04: Team Task Manager (Span 7, Wide Editorial Card) -->
+        <article class="archive-card card-wide card-teamtasks" data-index="04">
+          <div class="card-ambient-glow" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-visual-frame">
+              <img src="assets/projects/team_tasks.jpg" alt="Team Task Manager Collaborative Workspace Showcase" class="card-img" onerror="this.onerror=null; this.src='projects/team_tasks.jpg';">
+              <div class="card-visual-overlay"></div>
+              <div class="card-floating-badge">COLLABORATIVE APPLICATION</div>
+            </div>
+            
+            <div class="card-info-block">
+              <div class="card-header-line">
+                <span class="card-num">04 / FEATURED PROJECT</span>
+                <span class="card-type">FULL-STACK WORKSPACE</span>
+              </div>
+              <h3 class="card-title">Team Task Manager</h3>
+              <div class="card-stack-tags">
+                <span class="stack-tag">Next.js</span>
+                <span class="stack-tag">React.js</span>
+                <span class="stack-tag">Supabase</span>
+                <span class="stack-tag">TypeScript</span>
+                <span class="stack-tag">Tailwind CSS</span>
+              </div>
+              <p class="card-description">
+                Collaborative task management application built using Next.js and Supabase. Features real-time state synchronization, intuitive task tracking, project workspace management, and a clean, responsive user experience.
+              </p>
+              <div class="card-footer-action">
+                <span class="action-text">Explore Task Workspace</span>
+                <span class="action-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Section Ending Big CTA -->
+      <div class="discovery-cta-wrap">
+        <span class="cta-kicker-label">HAVE A VISION IN MIND?</span>
+        <a href="#contact" class="magnetic-big-cta" id="bigCtaTrigger">
+          <span class="big-cta-text">LET'S BUILD SOMETHING</span>
+          <span class="big-cta-arrow">→</span>
+        </a>
+        <p class="cta-sub-statement">
+          Open to exciting frontend development roles, creative web projects, and technical collaborations.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MAGAZINE COLOPHON FOOTER (Final Page Architectural Layout)
+       ========================================================================= -->
+  <footer class="magazine-footer" id="contact" aria-label="Site Colophon">
+    <div class="footer-container">
+      
+      <!-- Top Row: Editorial Statement + Directory & Network Columns -->
+      <div class="footer-editorial-row">
+        
+        <!-- Left: Statement -->
+        <div class="footer-statement-col">
+          <div class="footer-status-badge">
+            <span class="status-pulse-dot"></span>
+            <span>AVAILABLE FOR OPPORTUNITIES &amp; COLLABORATIONS</span>
+          </div>
+          <p class="footer-bio-statement">
+            I'm Om Prakash Muduli, a creative web developer who enjoys turning ideas into functional and engaging digital experiences. Experienced in frontend development with React, Next.js, and TypeScript, interactive 3D web interfaces, and AI applications.
+          </p>
+          <div class="footer-location-tag">OM PRAKASH MUDULI // CREATIVE WEB DEVELOPER</div>
+        </div>
+
+        <!-- Right: Directory Columns with Icons -->
+        <div class="footer-links-grid">
+          <div class="links-column">
+            <span class="column-header">INDEX</span>
+            <div class="footer-icons-row">
+              <a href="#home" class="footer-icon-btn" aria-label="01 / Hero" data-tooltip="01 / HERO">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </a>
+              <a href="#storytelling" class="footer-icon-btn" aria-label="02 / Story" data-tooltip="02 / STORY">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                  <line x1="7" y1="2" x2="7" y2="22"/>
+                  <line x1="17" y1="2" x2="17" y2="22"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <line x1="2" y1="7" x2="7" y2="7"/>
+                  <line x1="2" y1="17" x2="7" y2="17"/>
+                  <line x1="17" y1="17" x2="22" y2="17"/>
+                  <line x1="17" y1="7" x2="22" y2="7"/>
+                </svg>
+              </a>
+              <a href="#about" class="footer-icon-btn" aria-label="03 / About &amp; Skills" data-tooltip="03 / ABOUT &amp; SKILLS">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </a>
+              <a href="#projects" class="footer-icon-btn" aria-label="04 / Projects" data-tooltip="04 / PROJECTS">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7"/>
+                  <rect x="14" y="3" width="7" height="7"/>
+                  <rect x="14" y="14" width="7" height="7"/>
+                  <rect x="3" y="14" width="7" height="7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="links-column">
+            <span class="column-header">NETWORK</span>
+            <div class="footer-icons-row">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="GitHub" data-tooltip="GITHUB">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="LinkedIn" data-tooltip="LINKEDIN">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.85 6.27a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+                </svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="X / Twitter" data-tooltip="X / TWITTER">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="mailto:omprakashmuduli30@gmail.com" class="footer-icon-btn" aria-label="Email" data-tooltip="CONTACT // EMAIL">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+              <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="footer-icon-btn" aria-label="Resume (PDF)" data-tooltip="RESUME // PDF">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="links-column">
+            <span class="column-header">CAPABILITIES</span>
+            <div class="footer-icons-row">
+              <div class="footer-icon-btn footer-spec-icon" aria-label="React &amp; Next.js" data-tooltip="REACT &amp; NEXT.JS">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                  <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                  <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
+                  <circle cx="12" cy="12" r="1.8" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="footer-icon-btn footer-spec-icon" aria-label="Interactive 3D" data-tooltip="INTERACTIVE 3D">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+              <div class="footer-icon-btn footer-spec-icon" aria-label="Python &amp; Backend" data-tooltip="PYTHON &amp; BACKEND">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <polyline points="7 9 10 12 7 15"/>
+                  <line x1="13" y1="15" x2="17" y2="15"/>
+                </svg>
+              </div>
+              <div class="footer-icon-btn footer-spec-icon" aria-label="AI &amp; Computer Vision" data-tooltip="AI &amp; COMPUTER VISION">
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                  <circle cx="12" cy="12" r="3.2"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Monumental Architectural Typography: "OM" -->
+      <div class="footer-monumental-block">
+        <h2 class="footer-huge-name">OM</h2>
+      </div>
+
+      <!-- Bottom Colophon Bar -->
+      <div class="footer-colophon-bar">
+        <div class="colophon-item">
+          <span>&copy; 2026 OM PRAKASH MUDULI. ALL RIGHTS RESERVED.</span>
+        </div>
+        <div class="colophon-item colophon-center">
+          <span>CREATIVE WEB DEVELOPER PORTFOLIO</span>
+        </div>
+        <div class="colophon-item colophon-right">
+          <span>BUILT WITH REACT, NEXT.JS &amp; THREE.JS</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Editorial Status Toast -->
+  <div class="editorial-toast" id="editorialToast" role="status" aria-live="polite"></div>
+
+  <!-- Interactive Contact Dialog / Modal -->
+  <dialog class="contact-dialog" id="contactDialog">
+    <div class="dialog-inner">
+      <div class="dialog-top">
+        <span class="dialog-badge">DIRECT INQUIRY</span>
+        <button class="dialog-close" id="closeDialogBtn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <h2 class="dialog-heading">Let's build something engaging.</h2>
+      <p class="dialog-sub">Interested in discussing a project, internship opportunity, or creative collaboration? I'd love to connect.</p>
+
+      <div class="dialog-methods">
+        <!-- Resume Download Card -->
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="method-card" style="text-decoration: none;" title="Open / Download Om Prakash Muduli Resume">
+          <div class="method-meta">
+            <span class="method-type">CURRICULUM VITAE // PDF</span>
+            <span class="method-action">VIEW / DOWNLOAD ↗</span>
+          </div>
+          <span class="method-value">Om Prakash Muduli — Full Stack Developer.pdf</span>
+        </a>
+
+        <!-- Copy Email Card -->
+        <button class="method-card" id="copyEmailTrigger" title="Click to copy email address">
+          <div class="method-meta">
+            <span class="method-type">PRIMARY EMAIL // GURUGRAM, INDIA</span>
+            <span class="method-action">CLICK TO COPY EMAIL ↗</span>
+          </div>
+          <span class="method-value">omprakashmuduli30@gmail.com</span>
+        </button>
+
+        <!-- Direct Phone / Call Card -->
+        <a href="tel:+918920767945" class="method-card" style="text-decoration: none;" title="Call Om Prakash Muduli">
+          <div class="method-meta">
+            <span class="method-type">PHONE // WHATSAPP</span>
+            <span class="method-action">CALL / MESSAGE ↗</span>
+          </div>
+          <span class="method-value">+91 8920767945</span>
+        </a>
+
+        <div class="dialog-social-strip">
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="social-chip" style="font-weight: 700; border-color: var(--accent-pink);">📄 Resume PDF ↗</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-chip">GitHub ↗</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-chip">LinkedIn ↗</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-chip">X / Twitter ↗</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Interactive Projects Quick Drawer / Modal -->
+  <dialog class="projects-dialog" id="projectsDialog">
+    <div class="dialog-inner">
+      <div class="dialog-top">
+        <span class="dialog-badge">FEATURED PROJECTS</span>
+        <button class="dialog-close" id="closeProjectsBtn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <h2 class="dialog-heading">Selected Projects &amp; Work</h2>
+      <div class="projects-list">
+        
+        <div class="project-entry">
+          <div class="entry-header">
+            <span class="entry-title">Evelyn AI Assistant (★ 1st Position IDEAS 2K25)</span>
+            <span class="entry-year">Award Winner</span>
+          </div>
+          <p class="entry-desc">Windows-based personal AI assistant developed to make everyday computer interactions smarter and more convenient through an AI-powered desktop experience. Won 1st Position at Annual Tech Fest IDEAS 2K25.</p>
+        </div>
+
+        <div class="project-entry">
+          <div class="entry-header">
+            <a href="https://buildclash.ai.studio" target="_blank" rel="noopener noreferrer" class="entry-title" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">DevClash / BuildClash ↗</a>
+            <span class="entry-year">Live Platform</span>
+          </div>
+          <p class="entry-desc">Freelance marketplace and developer contest platform where clients specify code challenges with funded escrows, and developers compete to craft efficient solutions.</p>
+        </div>
+
+        <div class="project-entry">
+          <div class="entry-header">
+            <span class="entry-title">GestureCraft 3D</span>
+            <span class="entry-year">Computer Vision</span>
+          </div>
+          <p class="entry-desc">Webcam-based hand tracking system for interacting with and manipulating 3D objects in real time using Three.js and MediaPipe without extra hardware.</p>
+        </div>
+
+        <div class="project-entry">
+          <div class="entry-header">
+            <span class="entry-title">Team Task Manager</span>
+            <span class="entry-year">Full-Stack</span>
+          </div>
+          <p class="entry-desc">Collaborative task management application built using Next.js and Supabase featuring real-time synchronization, workspace organization, and intuitive task tracking.</p>
+        </div>
+
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
