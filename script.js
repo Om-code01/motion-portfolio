@@ -329,15 +329,21 @@ function initStoryScrollSection() {
   let targetProgress = 0;
   let currentProgress = 0;
   let isTicking = false;
+  let sectionTop = 0;
+  let totalDist = 1;
+
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  function measureSection() {
+    const rect = section.getBoundingClientRect();
+    const scrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+    sectionTop = rect.top + scrollY;
+    totalDist = Math.max(1, section.offsetHeight - window.innerHeight);
+  }
 
   function calculateProgress() {
-    const rect = section.getBoundingClientRect();
-    const windowH = window.innerHeight;
-    const totalDist = rect.height - windowH;
-
-    if (totalDist <= 0) return 0;
-
-    const scrolled = -rect.top;
+    const scrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+    const scrolled = scrollY - sectionTop;
     const p = scrolled / totalDist;
     return Math.max(0, Math.min(1, p));
   }
@@ -368,17 +374,33 @@ function initStoryScrollSection() {
     return { w0, h0, targetW, targetH };
   }
 
+  measureSection();
   let dims = getDimensions();
+
   window.addEventListener('resize', () => {
+    measureSection();
     dims = getDimensions();
     onScroll();
+  }, { passive: true });
+
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      measureSection();
+      dims = getDimensions();
+      onScroll();
+    }, 150);
   }, { passive: true });
 
   const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
   function updateStoryAnimation() {
-    // Lerp progress for smooth cinematic inertia
-    currentProgress += (targetProgress - currentProgress) * 0.15;
+    // Lerp progress for smooth cinematic inertia with fast touch tracking
+    const lerpRate = isTouchDevice ? 0.35 : 0.16;
+    currentProgress += (targetProgress - currentProgress) * lerpRate;
+
+    if (Math.abs(targetProgress - currentProgress) < 0.001) {
+      currentProgress = targetProgress;
+    }
 
     const p = currentProgress;
     
@@ -482,6 +504,8 @@ function initStoryScrollSection() {
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('touchmove', onScroll, { passive: true });
+  window.addEventListener('touchend', onScroll, { passive: true });
   onScroll();
 }
 
@@ -843,6 +867,10 @@ function initFrameStorytellingEngine() {
   let currentProgress = 0;
   let isTicking = false;
   let lastDrawnFrames = [-1, -1, -1];
+  let sectionTop = 0;
+  let totalDist = 1;
+
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   function clamp01(v) {
     return Math.max(0, Math.min(1, v));
@@ -852,13 +880,16 @@ function initFrameStorytellingEngine() {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
   }
 
-  function calculateProgress() {
+  function measureSection() {
     const rect = section.getBoundingClientRect();
-    const windowH = window.innerHeight;
-    const totalDist = rect.height - windowH;
+    const scrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+    sectionTop = rect.top + scrollY;
+    totalDist = Math.max(1, section.offsetHeight - window.innerHeight);
+  }
 
-    if (totalDist <= 0) return 0;
-    const scrolled = -rect.top;
+  function calculateProgress() {
+    const scrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+    const scrolled = scrollY - sectionTop;
     return clamp01(scrolled / totalDist);
   }
 
@@ -1075,6 +1106,9 @@ function initFrameStorytellingEngine() {
   }
 
   // 5. RAF Animation Ticker
+  const isTouchDeviceStory = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const frameLerpRate = isTouchDeviceStory ? 0.38 : 0.16;
+
   function onScroll() {
     targetProgress = calculateProgress();
     if (!isTicking) {
@@ -1084,11 +1118,11 @@ function initFrameStorytellingEngine() {
   }
 
   function tickLoop() {
-    // Smooth lerping to eliminate jitter and stutter
+    // Smooth lerping to eliminate jitter and stutter, with fast responsive tracking for touch
     const diff = targetProgress - currentProgress;
-    currentProgress += diff * 0.12;
+    currentProgress += diff * frameLerpRate;
 
-    if (Math.abs(diff) < 0.0001) {
+    if (Math.abs(diff) < 0.0015) {
       currentProgress = targetProgress;
     }
 
@@ -1101,11 +1135,25 @@ function initFrameStorytellingEngine() {
     }
   }
 
+  measureSection();
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('touchmove', onScroll, { passive: true });
+  window.addEventListener('touchend', onScroll, { passive: true });
+
   window.addEventListener('resize', () => {
+    measureSection();
     targetProgress = calculateProgress();
     currentProgress = targetProgress;
     updateStoryVisuals(currentProgress);
+  }, { passive: true });
+
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      measureSection();
+      targetProgress = calculateProgress();
+      currentProgress = targetProgress;
+      updateStoryVisuals(currentProgress);
+    }, 150);
   }, { passive: true });
 
   // 6. Interactive Tab Clicks (Direct Navigation to Chapter)
