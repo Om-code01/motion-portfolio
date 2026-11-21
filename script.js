@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mobileDrawer && mobileDrawer.classList.contains('active')) {
           mobileDrawer.classList.remove('active');
           if (mobileMenuToggle) {
+            mobileMenuToggle.classList.remove('active');
             mobileMenuToggle.setAttribute('aria-expanded', 'false');
           }
         }
@@ -102,12 +103,15 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuToggle.addEventListener('click', () => {
       const isOpen = mobileDrawer.classList.toggle('active');
       mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+      mobileMenuToggle.classList.toggle('active', isOpen);
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
       if (!mobileMenuToggle.contains(e.target) && !mobileDrawer.contains(e.target)) {
         mobileDrawer.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -797,14 +801,26 @@ function initFrameStorytellingEngine() {
 
     let w16_9, h16_9, w9_16, h9_16;
 
-    if (isMobile) {
-      const targetW = Math.min(vW * 0.90, 560);
-      w16_9 = targetW;
-      h16_9 = targetW * (9 / 16);
+    if (vW <= 640) {
+      // Mobile phones: prioritize ample space for content while keeping visual crisp
+      const maxVisualH = Math.min(vH * 0.28, 205);
+      const targetW = Math.min(vW * 0.88, 440);
+      h16_9 = Math.min(targetW * (9 / 16), maxVisualH);
+      w16_9 = h16_9 * (16 / 9);
 
-      h9_16 = Math.min(vH * 0.42, 340);
+      h9_16 = Math.min(h16_9 * 1.15, maxVisualH * 1.1);
+      w9_16 = h9_16 * (9 / 16);
+    } else if (isMobile) {
+      // Tablets / small laptops
+      const maxVisualH = Math.min(vH * 0.38, 300);
+      const targetW = Math.min(vW * 0.84, 540);
+      h16_9 = Math.min(targetW * (9 / 16), maxVisualH);
+      w16_9 = h16_9 * (16 / 9);
+
+      h9_16 = Math.min(h16_9 * 1.12, maxVisualH * 1.1);
       w9_16 = h9_16 * (9 / 16);
     } else {
+      // Desktop / large screens
       const maxH = Math.min(vH * 0.48, 390);
       const targetW = Math.min(vW * 0.42, 680);
 
